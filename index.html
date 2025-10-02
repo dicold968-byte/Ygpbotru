@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Кастинг | Универ. Глазами Подростка</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Загрузка...</p>
+  </div>
+
+  <!-- Particles Background -->
+  <div id="particles-js"></div>
+
+  <!-- Main Content -->
+  <div id="main" class="hidden">
+    <div class="container">
+      <h1 class="neon-title">УНИВЕР.<br>ГЛАЗАМИ ПОДРОСТКА</h1>
+      <p class="subtitle">Подайте заявку на кастинг в новый молодёжный сериал!</p>
+
+      <form id="castingForm">
+        <input type="text" id="fullname" placeholder="ФИО полностью *" required />
+        <input type="number" id="age" placeholder="Возраст (16–25) *" min="16" max="25" required />
+        <input type="text" id="city_uni" placeholder="Город и университет (если учитесь) *" required />
+        <input type="tel" id="phone" placeholder="Телефон (WhatsApp/Telegram) *" required />
+        <input type="email" id="email" placeholder="Email *" required />
+        <textarea id="experience" placeholder="Есть ли творческий опыт? (театр, КВН, TikTok, YouTube и т.д.)"></textarea>
+        <textarea id="links" placeholder="Ссылки на фото/видео (Instagram, TikTok, VK и т.д.)"></textarea>
+        <textarea id="motivation" placeholder="Почему вы хотите сняться в сериале «Универ. Глазами Подростка»? *" required></textarea>
+        <textarea id="character" placeholder="Какой тип персонажа вам ближе? (например: «первокурсник-ботаник», «харизматичный лидер», «загадочная девушка» и т.д.)"></textarea>
+        <button type="submit" class="neon-button">Отправить заявку</button>
+      </form>
+
+      <p style="margin-top: 20px;">
+        <a href="#" id="goToAdmin" class="admin-link">🔐 Админка</a>
+      </p>
+
+      <div id="message" class="hidden"></div>
+    </div>
+  </div>
+
+  <!-- Admin Login -->
+  <div id="adminLogin" class="hidden">
+    <div class="container">
+      <h2 class="neon-title">Админка</h2>
+      <input type="password" id="adminToken" placeholder="Введите токен доступа" autocomplete="off" />
+      <button id="loginBtn" class="neon-button">Войти</button>
+      <p id="loginError" class="hidden" style="color: #ff4d94; margin-top: 10px;"></p>
+    </div>
+  </div>
+
+  <!-- Admin Panel -->
+  <div id="adminPanel" class="hidden">
+    <div class="container">
+      <h2 class="neon-title">Админ-панель</h2>
+      <button id="logoutBtn" class="neon-button" style="margin-bottom: 20px;">Выйти</button>
+      <div id="submissionsList">
+        <p>Загрузка заявок...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
